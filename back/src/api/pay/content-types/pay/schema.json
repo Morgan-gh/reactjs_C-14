@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pays",
+  "info": {
+    "singularName": "pay",
+    "pluralName": "pays",
+    "displayName": "Pay",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    }
+  }
+}

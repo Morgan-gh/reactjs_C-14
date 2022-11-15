@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "althletes",
+  "info": {
+    "singularName": "althlete",
+    "pluralName": "althletes",
+    "displayName": "Athlete",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "poids": {
+      "type": "decimal"
+    },
+    "taille": {
+      "type": "decimal"
+    },
+    "votes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vote.vote",
+      "mappedBy": "althlete"
+    },
+    "evenements": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::evenement.evenement",
+      "mappedBy": "althletes"
+    },
+    "pay": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pay.pay"
+    },
+    "sport": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sport.sport",
+      "inversedBy": "althletes"
+    }
+  }
+}

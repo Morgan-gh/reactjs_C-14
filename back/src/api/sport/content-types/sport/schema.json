@@ -4,7 +4,8 @@
   "info": {
     "singularName": "sport",
     "pluralName": "sports",
-    "displayName": "Sports"
+    "displayName": "Sports",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,12 @@
     },
     "description": {
       "type": "string"
+    },
+    "althletes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::althlete.althlete",
+      "mappedBy": "sport"
     }
   }
 }

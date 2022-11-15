@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "votes",
+  "info": {
+    "singularName": "vote",
+    "pluralName": "votes",
+    "displayName": "vote",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "votes"
+    },
+    "althlete": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::althlete.althlete",
+      "inversedBy": "votes"
+    },
+    "evenement": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::evenement.evenement",
+      "inversedBy": "votes"
+    },
+    "sport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sport.sport"
+    }
+  }
+}
