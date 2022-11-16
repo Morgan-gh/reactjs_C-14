@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evenements",
+  "info": {
+    "singularName": "evenement",
+    "pluralName": "evenements",
+    "displayName": "Evenements",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "date_debut": {
+      "type": "datetime"
+    },
+    "date_fin": {
+      "type": "datetime"
+    },
+    "duree": {
+      "type": "decimal"
+    },
+    "localisation": {
+      "type": "string"
+    },
+    "sport": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sport.sport",
+      "inversedBy": "evenements"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pays": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pay.pay"
+    },
+    "atheltes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::athelte.athelte",
+      "mappedBy": "evenement"
+    }
+  }
+}

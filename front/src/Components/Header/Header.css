@@ -1,0 +1,69 @@
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(204, 204, 204);
+}
+
+.logoCenter {
+  height: 50px;
+  width: 200px;
+}
+
+.header {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  background: #f1f1f1;
+  position: fixed;
+  width: 100%;
+}
+
+.header__brand, .header__item, .logoCenter{
+  left: 0px;
+  border: 0;
+  cursor:pointer;
+}
+
+.header__brand, .header__item{
+    height: 50px;
+    width: 50px;
+}
+
+.header__brand.active .nav{
+    transform: translate(0);
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.header__toggler {
+  display: none;
+}
+.header__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: rgb(204, 204, 204);
+  transition: 0.3s ease-in;
+}
+/* Active Class */
+.header__active {
+  transform: translateX(0%);
+}
+
+.header img{
+  width: 100%;
+  height: 100%;
+}
+
+.header__brand{
+  left: 0px;
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sports",
+  "info": {
+    "singularName": "sport",
+    "pluralName": "sports",
+    "displayName": "Sports",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "SportIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "evenements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::evenement.evenement",
+      "mappedBy": "sport"
+    },
+    "description": {
+      "type": "string"
+    },
+    "atheltes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::athelte.athelte",
+      "mappedBy": "sport"
+    }
+  }
+}
